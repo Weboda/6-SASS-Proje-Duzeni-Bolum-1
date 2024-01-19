@@ -1,0 +1,47 @@
+@use 'variables';
+@use 'home';
+@use'about';
+* {
+    margin: 0;
+}
+
+a {
+    color: variables.$color-primary;
+}
+
+button {
+    background-color: variables.$color-primary;
+}
+
+p {
+    color: variables.$color-secondary;
+}
+
+h2 {
+    color: variables.$color-secondary;
+}
+
+#btn-outside-header {
+    margin-top: variables.$spacing * 4;
+}
+
+#actions {
+    margin-top: variables.$spacing * 2;
+}
+
+@mixin square($size, $color: #ff0000, $border-width: 5px) {
+    width: $size;
+    height: $size;
+    background-color: $color;
+    border: $border-width solid greenyellow;
+    border-radius: 20px;
+}
+
+.box-1 {
+    @include square(200px, variables.$color-primary, 25px);
+    font-size: 40px;
+}
+
+.box-2 {
+    @include square(300px, variables.$color-secondary);
+}
